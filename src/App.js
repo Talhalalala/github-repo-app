@@ -8,10 +8,10 @@ function App() {
    return (
       <div className="App">
          <Context.Provider value={{userData, setUserData}}>
-            <header className="App-header">
-               Git repo app
+            <header className="w3-text-purple w3-xxlarge w3-center">
+               Git Repo App
             </header>
-            <main>
+            <main className="w3-padding-32">
                <Outlet />
             </main>
          </Context.Provider>

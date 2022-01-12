@@ -23,6 +23,7 @@ function SearchRepo() {
    function submitForm(event) {
       event.preventDefault()
       getUserData(username)
+      event.reset()
    }
 
    function handleChange(event) {
@@ -31,10 +32,10 @@ function SearchRepo() {
    }
 
    return(
-      <div>
+      <div className="w3-center w3-margin w3-padding-32">
          <form onSubmit={ submitForm }>
-            <input type="text" name="user" placeholder="github username" onChange={handleChange}/>
-            <input type="submit" value="Submit"/>
+            <input type="text" name="user" placeholder="Enter github username" onChange={handleChange}/>
+            <input className="w3-button w3-purple w3-round-xlarge" type="submit" value="Submit"/>
          </form>
          <h3>{error}</h3>
          <RepoList />
