@@ -1,19 +1,23 @@
 import { useContext } from "react"
 import { Link } from 'react-router-dom'
-import Context from "../utils/context"
+import Context from "../utils/Context"
 
 function RepoList() {
-   const userData = useContext(Conext.userData)
-   const repoList = userData.map(e => {
-      <li>
-         <Link to='/repoPage'>{e.name}</Link>
-      </li>
-   })
+   const { userData } = useContext(Context)
+
+   function getRepos() {
+      return userData.map((e, i) => 
+            <div key={i}>
+               <Link to={`/repo_page/${e.name}`}>{e.name}</Link>
+               <div>{ e.private ? 'private' : 'public' }</div>
+            </div>
+      )
+   }
 
    return (
-      <ul>
-      { userData ? repoList : ''}
-      </ul>
+      <div>
+         { userData && getRepos() }
+      </div>
    )
 }
 

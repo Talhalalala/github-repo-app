@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
+import SearchRepo from './pages/SearchRepo';
 import RepoPage from './pages/RepoPage';
-import Context from './utils/Context'
-
-const [userData, setUserData] = useState('')
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Context.Provider value={{userData, setUserData}}>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/repo_page" element={<RepoPage />}>
-          <Route path=":repo_name" element={<RepoPage />} />
-        </Route>
-      </Routes>
-    </Context.Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+   <React.StrictMode>
+      <BrowserRouter>
+         <Routes>
+            <Route path="/" element={<App />}>
+               <Route index element={<SearchRepo />}/>
+               <Route path="/repo_page" element={<RepoPage />}>
+                  <Route path=":name" element={<RepoPage />} />
+               </Route>
+            </Route>
+         </Routes>
+      </BrowserRouter>
+   </React.StrictMode>,
+   document.getElementById('root')
 );
 

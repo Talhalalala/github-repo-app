@@ -1,18 +1,21 @@
+import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import logo from './logo.svg';
-import './App.css';
+import Context from './utils/Context'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-      <main>
-        <Outlet />
-      </main>
+   const [userData, setUserData] = useState('')
 
-    </div>
+   return (
+      <div className="App">
+         <Context.Provider value={{userData, setUserData}}>
+            <header className="App-header">
+               Git repo app
+            </header>
+            <main>
+               <Outlet />
+            </main>
+         </Context.Provider>
+      </div>
   );
 }
 
