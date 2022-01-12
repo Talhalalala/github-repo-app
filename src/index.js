@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import App from './App';
 import RepoPage from './pages/RepoPage';
 import Context from './utils/Context'
