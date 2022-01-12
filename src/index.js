@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import RepoPage from './pages/RepoPage';
+import Context from './utils/Context'
+
+const [userData, setUserData] = useState('')
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Context.Provider value={{userData, setUserData}}>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/repo_page" element={<RepoPage />}>
+          <Route path=":repo_name" element={<RepoPage />} />
+        </Route>
+      </Routes>
+    </Context.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
