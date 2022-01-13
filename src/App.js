@@ -3,11 +3,11 @@ import { Outlet } from 'react-router-dom'
 import Context from './utils/Context'
 
 function App() {
-   const [userData, setUserData] = useState('')
+   const [repoData, setRepoData] = useState('')
 
    return (
       <div className="App">
-         <Context.Provider value={{userData, setUserData}}>
+         <Context.Provider value={{repoData, setRepoData}}>
             <header className="w3-text-purple w3-xxlarge w3-center">
                Git Repo App
             </header>
