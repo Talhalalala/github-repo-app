@@ -15,6 +15,7 @@ This is a paired assignment in which we were required to develop our own minimil
 - Javascript
 - Axios
 - React 
+- W3S CSS framework 
 
 ## Files 
 
