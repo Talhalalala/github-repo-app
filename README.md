@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# LAP 3 Code Challenge 
+### By Rajesh Sharma and Talha Sadak
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Assignment Description
 
-## Available Scripts
+This is a paired assignment in which we were required to develop our own minimilistic version of github that allows users to track their existing repositories by entering a github user name. The search result will display a list of repos and upon selecting a repo, the user will be provided with extra information about the selected repository. 
 
-In the project directory, you can run:
+## Installation & Usage 
 
-### `npm start`
+- For first time installation, run the command `npm i` to install all the required dependencies to run the application. 
+- To run the application, run the command `npm start`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies 
+- HTML/CSS 
+- Javascript
+- Axios
+- React 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Files 
 
-### `npm test`
+## Public 
+### index.html 
+- Contains basic html content allowing react to operate through. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## src 
+### App.js 
+- This file is for App Component, acting as the container for all other components. 
 
-### `npm run build`
+### index.js 
+- This is file is the javascript entry point. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Components 
+- This folder contains all the files with functional components to handle the applications operations. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pages
+- This folder contains all the files that handle the display and location for the results page and repo information pages. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Utils 
+- Contains the files to import and utilise Context, allowing for the global management of props. 
